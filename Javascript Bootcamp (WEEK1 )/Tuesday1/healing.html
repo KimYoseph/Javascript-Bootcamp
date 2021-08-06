@@ -1,0 +1,14 @@
+<script>
+    let health = 50;
+
+    function heal(amount, message) {
+        health += amount;
+        alert(message);
+        alert("Healing the player " + amount + " HP");
+    }
+
+    alert("before healing, the player has " + health + "HP");
+    heal(50, "Picked up a large medkit");
+    heal(15, "Picked up a small medkit");
+    alert("after healilng, the player has " + health + "HP");
+</script>

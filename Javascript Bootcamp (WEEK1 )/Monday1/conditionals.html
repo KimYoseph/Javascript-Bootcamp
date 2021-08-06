@@ -1,0 +1,16 @@
+<script>
+    var secret = Math.ceil(Math.random() * 101);
+    console.log(secret);
+
+    var userGuess = prompt("Guess a number");
+
+    if (userGuess == secret) {
+        alert("Congratulations!");
+    }
+    else if(userGuess > secret) {
+        alert("lower");
+    }
+    else {
+        alert("higher");
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        let input = prompt("enter your password: ");
+        function logIn() {
+            return new Promise(function(resolve, reject) {
+            if(input == "MITBootcamp") {
+                setTimeout(function() {
+                    resolve("Access Granted!");
+                },2000)
+            }
+            else {
+                setTimeout( function() {
+                    reject("Access Denied!");
+                    console.error();
+                }, 2000);
+            }
+            });
+        }
+
+        async function asyncCall() {
+            const output = await logIn();
+            document.getElementById('access').innerHTML = output;
+        }
+        asyncCall().catch(error => document.getElementById('access').innerHTML = error);
+    </script>
+    <body>
+        <h1 id="access"></h1>
+    </body>
+</html>
